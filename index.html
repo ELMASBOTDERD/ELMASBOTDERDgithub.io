@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffe6c9, #ffb3b3);
+      font-family: 'Great Vibes', cursive;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mensaje {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      color: #fffaf2;
+      text-align: center;
+      text-shadow: 0 0 15px rgba(0,0,0,0.2);
+      animation: latido 2.5s ease-in-out infinite;
+      backdrop-filter: blur(4px);
+      padding: 20px 40px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.03); }
+    }
+
+    .esquina {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      color: #fffaf2;
+      font-size: 1.5rem;
+      text-align: right;
+      animation: aparecer 2s ease-out forwards;
+      opacity: 0;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    .confeti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      opacity: 0.9;
+      border-radius: 50%;
+      animation: caer 2.5s linear infinite;
+    }
+
+    @keyframes caer {
+      from {
+        top: -10px;
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      to {
+        top: 110vh;
+        opacity: 0;
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Brillitos decorativos */
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: flotar 4s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0) scale(1); opacity: 0.5; }
+      50% { transform: translateY(-15px) scale(1.3); opacity: 1; }
+      100% { transform: translateY(0) scale(1); opacity: 0.5; }
+    }
+
+    /* Confetis colocados manualmente */
+    .c1 { left: 10vw; background: #ff6b6b; animation-delay: 0s; }
+    .c2 { left: 25vw; background: #f8e473; animation-delay: 0.5s; }
+    .c3 { left: 40vw; background: #4dd4ff; animation-delay: 0.2s; }
+    .c4 { left: 55vw; background: #c87bff; animation-delay: 0.8s; }
+    .c5 { left: 70vw; background: #73ffa1; animation-delay: 0.3s; }
+    .c6 { left: 85vw; background: #ffb347; animation-delay: 0.7s; }
+
+    /* Sparkles */
+    .s1 { top: 20%; left: 15%; animation-delay: 1s; }
+    .s2 { top: 40%; left: 80%; animation-delay: 0.5s; }
+    .s3 { top: 60%; left: 30%; animation-delay: 2s; }
+    .s4 { top: 75%; left: 60%; animation-delay: 1.5s; }
+    .s5 { top: 10%; left: 50%; animation-delay: 0.2s; }
+  </style>
+</head>
+<body>
+  <div class="mensaje">
+    ¡Feliz cumple niña de 22 años! 🎉
+  </div>
+  <div class="esquina">
+    Que cumplas muchos años más,<br>
+    ¡te dije que lo haría como nadie más! jajaj 😎
+  </div>
+
+  <!-- Confetis -->
+  <div class="confeti c1"></div>
+  <div class="confeti c2"></div>
+  <div class="confeti c3"></div>
+  <div class="confeti c4"></div>
+  <div class="confeti c5"></div>
+  <div class="confeti c6"></div>
+
+  <!-- Sparkles -->
+  <div class="sparkle s1"></div>
+  <div class="sparkle s2"></div>
+  <div class="sparkle s3"></div>
+  <div class="sparkle s4"></div>
+  <div class="sparkle s5"></div>
+</body>
+</html>
+
