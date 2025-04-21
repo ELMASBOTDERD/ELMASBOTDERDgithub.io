@@ -6,6 +6,11 @@
   <title>Feliz Cumple</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --mensaje-size: 4rem;
+      --esquina-size: 1.5rem;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -21,15 +26,17 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 4rem;
+      font-size: var(--mensaje-size);
       color: #fffaf2;
       text-align: center;
       text-shadow: 0 0 15px rgba(0,0,0,0.2);
       animation: latido 2.5s ease-in-out infinite;
       backdrop-filter: blur(4px);
-      padding: 20px 40px;
+      padding: 2rem 3rem;
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.05);
+      max-width: 90%;
+      box-sizing: border-box;
     }
 
     @keyframes latido {
@@ -39,14 +46,15 @@
 
     .esquina {
       position: absolute;
-      bottom: 30px;
-      right: 30px;
+      bottom: 2rem;
+      right: 2rem;
       color: #fffaf2;
-      font-size: 1.5rem;
+      font-size: var(--esquina-size);
       text-align: right;
       animation: aparecer 2s ease-out forwards;
       opacity: 0;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      max-width: 80%;
     }
 
     @keyframes aparecer {
@@ -83,7 +91,6 @@
       }
     }
 
-    /* Brillitos decorativos */
     .sparkle {
       position: absolute;
       width: 4px;
@@ -100,7 +107,7 @@
       100% { transform: translateY(0) scale(1); opacity: 0.5; }
     }
 
-    /* Confetis colocados manualmente */
+    /* Confetis manuales */
     .c1 { left: 10vw; background: #ff6b6b; animation-delay: 0s; }
     .c2 { left: 25vw; background: #f8e473; animation-delay: 0.5s; }
     .c3 { left: 40vw; background: #4dd4ff; animation-delay: 0.2s; }
@@ -108,12 +115,30 @@
     .c5 { left: 70vw; background: #73ffa1; animation-delay: 0.3s; }
     .c6 { left: 85vw; background: #ffb347; animation-delay: 0.7s; }
 
-    /* Sparkles */
+    /* Brillitos */
     .s1 { top: 20%; left: 15%; animation-delay: 1s; }
     .s2 { top: 40%; left: 80%; animation-delay: 0.5s; }
     .s3 { top: 60%; left: 30%; animation-delay: 2s; }
     .s4 { top: 75%; left: 60%; animation-delay: 1.5s; }
     .s5 { top: 10%; left: 50%; animation-delay: 0.2s; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      :root {
+        --mensaje-size: 2.5rem;
+        --esquina-size: 1.2rem;
+      }
+
+      .mensaje {
+        padding: 1.5rem 2rem;
+      }
+
+      .esquina {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: var(--esquina-size);
+      }
+    }
   </style>
 </head>
 <body>
